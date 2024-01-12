@@ -1,26 +1,499 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="recomendations">
+    <div class="recomendations__header">
+      <h2 class="recomendations__title">Персональні рекомендації</h2>
+      <div class="recomendations__navarrows">
+        <div class="arrow arrow--left">
+          <img src="./assets/Icon.png" alt="icon" />
+        </div>
+        <div class="arrow arrow--right">
+          <img src="./assets/Icon.png" alt="icon" />
+        </div>
+      </div>
+    </div>
+    <div class="recomendations__container">
+      <div class="recomended-products">
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+        <div class="recomended-products__item product-item">
+          <div class="product-item__imgblock">
+            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+          </div>
+          <div class="product-item__text">
+            <div class="product-item__name">
+              Вавилон. Прихована історія, історія людства. Частина 1
+            </div>
+            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__rating rating">
+              <div class="rating-starslist">
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+                <div class="rating-star">
+                  <img src="./assets/star.jpg" alt="star" />
+                </div>
+              </div>
+              <div class="rating-value">493</div>
+            </div>
+          </div>
+          <div class="product-item__avialability">
+            <div class="product-item__price">
+              489 <span class="product-item__curency">₴</span>
+            </div>
+            <div class="product-item__status">В наявності</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+.recomendations {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1700px;
+  padding: 25px;
+  gap: 20px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 500;
+  }
+
+  &__navarrows {
+    display: flex;
+    gap: 15px;
+  }
+
+  .recomended-products {
+    display: flex;
+    gap: 40px;
+
+    &__item.product-item {
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .product-item {
+      position: relative;
+      width: 284px;
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: #d6d6d6;
+        top: 0;
+        right: -20px;
+      }
+
+      &__imgblock {
+        align-self: center;
+        padding: 13px 0;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &__name,
+      &__autor {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+      }
+
+      &__autor {
+        color: #707070;
+      }
+
+      &__rating.rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .rating-starslist {
+          display: flex;
+        }
+
+        .rating-value {
+          font-size: 14px;
+          line-height: 16px;
+          color: #d6d6d6;
+        }
+      }
+
+      &__avialability {
+        height: 92px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+
+      &__price {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 26px;
+        line-height: 28px;
+      }
+
+      &__curency {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      &__status {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4c4c4d;
+      }
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1700px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: none;
+    padding-bottom: 13px;
+  }
+
+  &__navarrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+      display: flex;
+
+      &--right {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #d6d6d6;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }
 </style>
