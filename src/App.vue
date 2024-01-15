@@ -14,6 +14,13 @@
     <div class="recomendations__container">
       <div class="recomended-products">
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -51,6 +58,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -88,6 +102,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -125,6 +146,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -162,6 +190,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -199,6 +234,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -236,6 +278,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -273,6 +322,13 @@
           </div>
         </div>
         <div class="recomended-products__item product-item">
+          <img class="product-item__label" src="./assets/label.png" alt="" />
+          <button class="btn product-item__wishlist">
+            <img src="./assets/wishlist.png" alt="" />
+          </button>
+          <button class="btn product-item__cart">
+            <img src="./assets/cart.png" alt="" />
+          </button>
           <div class="product-item__imgblock">
             <img class="product-item__img" src="./assets/book.jpg" alt="" />
           </div>
@@ -325,27 +381,32 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 100%;
+  min-width: 270px;
   max-width: 1700px;
-  padding: 25px;
-  gap: 20px;
+  padding: 0 20px;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
 
   &__title {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 22px;
+    line-height: 30px;
     font-weight: 500;
-  }
 
-  &__navarrows {
-    display: flex;
-    gap: 15px;
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
 
   .recomended-products {
@@ -353,7 +414,6 @@ export default {
     gap: 40px;
 
     &__item.product-item {
-      min-width: 240px;
       display: flex;
       flex-direction: column;
       gap: 13px;
@@ -361,7 +421,11 @@ export default {
 
     .product-item {
       position: relative;
-      width: 284px;
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        min-width: 254px;
+      }
 
       &:last-child {
         &::after {
@@ -383,6 +447,16 @@ export default {
         align-self: center;
         padding: 13px 0;
 
+        img {
+          width: 140px;
+          height: 215px;
+
+          @media screen and (min-width: 768px) {
+            width: 176px;
+            height: 269px;
+          }
+        }
+
         &:last-child {
           border-right: none;
         }
@@ -397,9 +471,14 @@ export default {
       &__name,
       &__autor {
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 22px;
         font-weight: 500;
+
+        @media screen and (min-width: 768px) {
+          font-size: 16px;
+          line-height: 26px;
+        }
       }
 
       &__autor {
@@ -447,22 +526,63 @@ export default {
         line-height: 16px;
         color: #4c4c4d;
       }
+
+      &__label {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+
+        @media (min-width: 769px) and (max-width: 1025px) {
+          display: block;
+        }
+      }
+
+      .btn {
+        background: none;
+        border: none;
+      }
+
+      &__wishlist,
+      &__cart {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+
+        @media (min-width: 468px) {
+          display: none;
+        }
+      }
+
+      &__wishlist {
+        padding: 13px 0 0 0;
+        top: 0;
+      }
+
+      &__cart {
+        padding: 0;
+        bottom: 0;
+      }
     }
   }
 
   &__container {
+    overflow-x: scroll;
     margin: 0 auto;
-    max-width: 1700px;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: none;
     padding-bottom: 13px;
   }
 
   &__navarrows {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
 
     .arrow {
       display: flex;
