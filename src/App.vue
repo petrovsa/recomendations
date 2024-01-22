@@ -13,7 +13,11 @@
     </div>
     <div class="recomendations__container">
       <div class="recomended-products">
-        <div class="recomended-products__item product-item">
+        <div
+          v-for="book in booksList"
+          :key="book.id"
+          class="recomended-products__item product-item"
+        >
           <img class="product-item__label" src="./assets/label.png" alt="" />
           <button class="btn product-item__wishlist">
             <img src="./assets/wishlist.png" alt="" />
@@ -22,13 +26,17 @@
             <img src="./assets/cart.png" alt="" />
           </button>
           <div class="product-item__imgblock">
-            <img class="product-item__img" src="./assets/book.jpg" alt="" />
+            <img class="product-item__img" :src="book.imgUrl" alt="" />
           </div>
           <div class="product-item__text">
             <div class="product-item__name">
-              Вавилон. Прихована історія, історія людства. Частина 1
+              {{ book.name }}
             </div>
-            <div class="product-item__autor">Ребекка Кван</div>
+            <div class="product-item__autor">
+              <a :href="book.autor.autorUrl">
+                {{ book.autor.autor }}
+              </a>
+            </div>
             <div class="product-item__rating rating">
               <div class="rating-starslist">
                 <div class="rating-star">
@@ -47,14 +55,25 @@
                   <img src="./assets/star.jpg" alt="star" />
                 </div>
               </div>
-              <div class="rating-value">493</div>
+              <div class="rating-value">{{ book.ratingLabel }}</div>
             </div>
           </div>
           <div class="product-item__avialability">
-            <div class="product-item__price">
-              489 <span class="product-item__curency">₴</span>
+            <div v-if="book.oldPrice" class="product-item__price">
+              {{ book.oldPrice }} <span class="product-item__curency">₴</span>
             </div>
-            <div class="product-item__status">В наявності</div>
+            <div class="product-item__price">
+              {{ book.price }} <span class="product-item__curency">₴</span>
+            </div>
+            <div v-if="book.inStock" class="product-item__status">
+              В наявності
+            </div>
+            <div
+              v-else
+              class="product-item__status product-item__status--outstock"
+            >
+              Немає В наявності
+            </div>
           </div>
         </div>
         <div class="recomended-products__item product-item">
@@ -373,6 +392,125 @@
 <script>
 export default {
   name: "App",
+
+  data () {
+    return {
+      booksList: [
+        {
+          id: 1,
+          name: "Вавилон. Прихована історія, історія людства. Частина 1",
+          imgUrl: "./assets/book.jpg",
+          autor: {
+            autor: "Ребекка Кван",
+            autorUrl: "#",
+          },
+          price: 489,
+          oldPrice: null,
+          ratingLabel: 453,
+          wishlistStatus: false,
+          inStock: true,
+        },
+        {
+          id: 2,
+          name: "Довбуш. Гідність або забуття",
+          imgUrl: "./assets/book.jpg",
+          autor: {
+            autor: "Аґата Крісті",
+            autorUrl: "#",
+          },
+          price: 238,
+          oldPrice: null,
+          ratingLabel: 43,
+          wishlistStatus: false,
+          inStock: true,
+  },
+  {
+   'id': 3,
+   'name': 'Фриланс здорової людини. Як працювати з задоволенням',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Т. Гонченко',
+      'autorUrl': '# '
+    },
+   'price': 220,
+   'oldPrice': null,
+   'ratingLabel': 5,
+   'wishlistStatus': fasle,
+   'inStock': true
+  },
+  {
+    'id': 4,
+   'name': 'Забуте вбивство',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Аґата Крісті',
+      'autorUrl': '# '
+    },
+   'price': 230,
+   'oldPrice': null,
+   'ratingLabel': 545,
+   'wishlistStatus': fasle,
+   'inStock': true
+  },
+  {
+    'id': 5,
+   'name': 'Чому нації занепадають. Походження влади, багатства і бідності',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Д. Аджемоґлу, Дж. Робінсон',
+      'autorUrl': '# '
+    },
+   'price': 350,
+   'oldPrice': 420,
+   'ratingLabel': 41,
+   'wishlistStatus': fasle,
+   'inStock': true
+  },
+  {
+    'id': 6,
+   'name': 'Rework. Ця книжка змінить ваш погляд на бізнес',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Джейсон Фрайд, Девід Хайне',
+      'autorUrl': '# '
+    },
+   'price': 290,
+   'oldPrice': null,
+   'ratingLabel': 578,
+   'wishlistStatus': true,
+   'inStock': true
+  },
+  {
+    'id': 7,
+   'name': 'Вавилон. Прихована історія, історія людства. Частина 1',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Ребекка Кван',
+      'autorUrl': '# '
+    },
+   'price': 489,
+   'oldPrice': null,
+   'ratingLabel': 453,
+   'wishlistStatus': fasle,
+   'inStock': false
+  },
+  {
+    'id': 0,
+   'name': 'Вавилон. Прихована історія, історія людства. Частина 1',
+   'imgUrl': './assets/book.jpg',
+   'autor': {
+      'autor': 'Ребекка Кван',
+      'autorUrl': '# '
+    },
+   'price': 489,
+   'oldPrice': null,
+   'ratingLabel': 453,
+   'wishlistStatus': fasle,
+   'inStock': true
+  }
+]
+    };
+  }
 };
 </script>
 
