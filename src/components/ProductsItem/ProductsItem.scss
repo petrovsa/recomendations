@@ -1,0 +1,214 @@
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100%;
+    padding: 0 20px 112px;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #f6f6f6;
+        box-shadow: inset 0 0 5px $black-200;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      min-width: 254px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__imgblock {
+      align-self: center;
+      padding: 13px 0;
+
+      img {
+        width: 140px;
+        height: 215px;
+
+        @media screen and (min-width: 768px) {
+          width: 176px;
+          height: 269px;
+        }
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__name,
+    &__link {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 500;
+
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    &__link {
+      color: $black-400;
+      text-decoration: none;
+      cursor: pointer;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $black-700;
+        }
+      }
+    }
+
+    &__rating.rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .rating-starslist {
+        display: flex;
+      }
+
+      .rating-value {
+        font-size: 14px;
+        line-height: 16px;
+        color: $black-300;
+      }
+    }
+
+    &__avialability {
+      position: absolute;
+      bottom: 10px;
+      height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        display: inline;
+      }
+
+      &-normal,
+      &-old {
+        display: inline-block;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 26px;
+        line-height: 28px;
+        margin-right: 5px;
+      }
+
+      &-old {
+        font-size: 20px;
+        line-height: 25px;
+        color: $black-400;
+        text-decoration: line-through;
+      }
+
+      .new {
+        color: $red
+      }
+    }
+
+    &__curency {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 20px;
+      line-height: 25px;
+
+      &-normal,
+      &-old {
+        font-size: 20px;
+        line-height: 25px;
+        margin-right: 10px;
+      }
+
+      &-old {
+        font-size: 16px;
+        line-height: 16px;
+        color: $black-400;
+      }
+    }
+
+    &__status {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black-700;
+    }
+
+    &__label {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+    }
+
+    .btn {
+      background-color: transparent;
+      border: none;
+    }
+
+    &__wishlist,
+    &__cart {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      width: 33px;
+      height: 33px;
+      right: 20px;
+      z-index: 10;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: 468px) {
+        display: block;
+      }
+    }
+
+    &__wishlist {
+      background-image: url('./../../assets/wishlist.svg');
+      padding: 13px 0 0 0;
+      top: 0;
+
+      @media (hover: hover) {
+        &:hover {
+          background-image: url('./../../assets/wishlist-active.svg');
+        }
+      }
+    }
+
+    .in-wishlist {
+      background-image: url('./../../assets/wishlist-active.svg');
+    }
+
+    &__cart {
+      display: none;
+      background-image: url('./../../assets/cart.svg');
+      padding: 0;
+      bottom: 10px;
+
+      @media only screen and (hover: hover) {
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
