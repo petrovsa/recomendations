@@ -182,6 +182,10 @@ export default {
     margin: 0 auto;
   }
 }
+
+a {
+  all: initial;
+}
 /* width */
 ::-webkit-scrollbar {
   height: 4px;
