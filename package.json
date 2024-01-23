@@ -22,7 +22,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "node-sass": "^9.0.0",
-    "prettier": "^2.4.1",
     "sass-loader": "^13.3.3"
   },
   "eslintConfig": {
@@ -32,8 +31,7 @@
     },
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "plugin:prettier/recommended"
+      "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
