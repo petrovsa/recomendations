@@ -10,6 +10,14 @@
       &:hover {
         background-color: #f6f6f6;
         box-shadow: inset 0 0 5px $black-200;
+
+        .product-item__cart {
+          opacity: 1;
+        }
+
+        .product-item__wishlist {
+          opacity: 1;
+        }
       }
     }
 
@@ -23,7 +31,7 @@
       }
     }
 
-    &__imgblock {
+    &__picture {
       align-self: center;
       padding: 13px 0;
 
@@ -73,23 +81,7 @@
       }
     }
 
-    &__rating.rating {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      .rating-starslist {
-        display: flex;
-      }
-
-      .rating-value {
-        font-size: 14px;
-        line-height: 16px;
-        color: $black-300;
-      }
-    }
-
-    &__avialability {
+    &__actions {
       position: absolute;
       bottom: 10px;
       height: 92px;
@@ -157,8 +149,12 @@
       display: block;
       position: absolute;
       z-index: 10;
-      top: 0;
-      left: 0;
+      top: 10px;
+      left: 20px;
+
+      @media (min-width: 768px) {
+        left: 10px;
+      }
     }
 
     .btn {
@@ -173,20 +169,27 @@
       cursor: pointer;
       width: 33px;
       height: 33px;
-      right: 20px;
+      right: 40px;
       z-index: 10;
       background-repeat: no-repeat;
       background-position: center;
 
-      @media (min-width: 468px) {
-        display: block;
+      @media (min-width: 768px) {
+        right: 20px;
       }
     }
 
     &__wishlist {
+      opacity: 0;
       background-image: url('./../../assets/wishlist.svg');
       padding: 13px 0 0 0;
-      top: 0;
+      top: 10px;
+
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 667px) {
+        opacity: 1;
+      }
 
       @media (hover: hover) {
         &:hover {
@@ -200,10 +203,17 @@
     }
 
     &__cart {
-      display: none;
+      display: block;
+      opacity: 0;
       background-image: url('./../../assets/cart.svg');
       padding: 0;
       bottom: 10px;
+
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 667px) {
+        opacity: 1;
+      }
 
       @media only screen and (hover: hover) {
         &:hover {

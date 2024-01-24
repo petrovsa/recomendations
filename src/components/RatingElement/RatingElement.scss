@@ -1,0 +1,16 @@
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    &__starslist {
+      display: flex;
+      gap: 2px;
+    }
+
+    &__value {
+      font-size: 14px;
+      line-height: 16px;
+      color: $black-300;
+    }
+  }

@@ -23,24 +23,4 @@ export default {
     }
 </script>
 
-<style lang="scss">
-
-.catalog {
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    row-gap: 20px;
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 768px) {
-        max-width: 1700px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;       
-    }
-
-    .product-item {
-      position: relative;
-      max-width: 254px; 
-    }
-}
-</style>
+<style lang="scss" src="./CatalogProducts.scss" />
