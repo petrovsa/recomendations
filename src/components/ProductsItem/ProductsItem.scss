@@ -9,10 +9,11 @@
     cursor: pointer;
     min-width: 169px;
     max-width: 254px;
+    scroll-snap-align: start;
 
     @media (hover: hover) {
       &:hover {
-        box-shadow: 0 2.454545497894287px 8.181818008422852px 0px #00000033;
+        box-shadow: 0 2.454545497894287px 8.181818008422852px 0 #00000033;
 
         .product-item__cart {
           opacity: 1;
