@@ -1,15 +1,18 @@
   .product-item {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 13px;
     width: 100%;
-    padding: 0 20px 112px;
+    padding: 0 20px 10px;
     cursor: pointer;
+    min-width: 169px;
+    max-width: 254px;
 
     @media (hover: hover) {
       &:hover {
-        background-color: #f6f6f6;
-        box-shadow: inset 0 0 5px $black-200;
+        box-shadow: 0 2.454545497894287px 8.181818008422852px 0px #00000033;
 
         .product-item__cart {
           opacity: 1;
@@ -29,6 +32,12 @@
       &::after {
         display: none;
       }
+    }
+
+    &__picture,
+    &__text,
+    &__actions {
+      flex: 1;
     }
 
     &__picture {
@@ -56,9 +65,16 @@
       gap: 10px;
     }
 
+    &__actions {
+      height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
     &__name,
     &__link {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-family: $font-base;
       font-size: 14px;
       line-height: 22px;
       font-weight: 500;
@@ -81,16 +97,8 @@
       }
     }
 
-    &__actions {
-      position: absolute;
-      bottom: 10px;
-      height: 92px;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-    }
-
     &__price {
+      font-family: $font-base;
       display: flex;
       align-items: center;
 
@@ -100,8 +108,8 @@
 
       &-normal,
       &-old {
+        font-family: $font-base;
         display: inline-block;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 26px;
         line-height: 28px;
         margin-right: 5px;
@@ -120,7 +128,7 @@
     }
 
     &__curency {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-family: $font-base;
       font-size: 20px;
       line-height: 25px;
 
@@ -139,7 +147,7 @@
     }
 
     &__status {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-family: $font-base;
       font-size: 14px;
       line-height: 16px;
       color: $black-700;
@@ -159,7 +167,6 @@
 
     .btn {
       background-color: transparent;
-      border: none;
     }
 
     &__wishlist,
@@ -174,40 +181,54 @@
       background-repeat: no-repeat;
       background-position: center;
 
-      @media (min-width: 768px) {
-        right: 20px;
+      @media (hover: hover) {
+        &:hover {
+          box-shadow: 0 2.454545497894287px 8.181818008422852px 0 #00000033;
+        }
       }
     }
 
     &__wishlist {
+      border: 1px solid $gold-200;
+      border-radius: 50%;
       opacity: 0;
-      background-image: url('./../../assets/wishlist.svg');
-      padding: 13px 0 0 0;
+      background-image: url("@/assets/heart.svg");
       top: 10px;
+
+      @media (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+      }
 
       @media only screen
       and (min-device-width : 320px)
       and (max-device-width : 667px) {
         opacity: 1;
       }
+    }
 
-      @media (hover: hover) {
-        &:hover {
-          background-image: url('./../../assets/wishlist-active.svg');
-        }
-      }
+    &__wishlist.btn {
+      background-color: $white;
     }
 
     .in-wishlist {
-      background-image: url('./../../assets/wishlist-active.svg');
+      background-image: url("@/assets/heart-active.svg");
     }
 
     &__cart {
+      border: none;
       display: block;
       opacity: 0;
-      background-image: url('./../../assets/cart.svg');
+      background-image: url("@/assets/cart-new.svg");
       padding: 0;
-      bottom: 10px;
+      bottom: 12px;
+
+      @media (min-width: 768px) {
+        width: 43px;
+        height: 43px;
+        right: 20px;
+      }
 
       @media only screen
       and (min-device-width : 320px)

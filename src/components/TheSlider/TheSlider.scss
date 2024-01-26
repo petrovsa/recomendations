@@ -20,7 +20,7 @@
     }
   
     &__title {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-family: $font-base;
       font-size: 22px;
       line-height: 30px;
       font-weight: 500;
@@ -39,7 +39,7 @@
       padding-bottom: 13px;
     }
   
-    &__navarrows {
+    &__nav {
       display: none;
       align-items: center;
       justify-content: center;
@@ -48,13 +48,12 @@
       @media screen and (min-width: 768px) {
         display: flex;
       }
-  
-      .arrow {
-        display: flex;
-  
-        &--right {
-          transform: rotate(180deg);
-        }
-      }
     }
+  &__arrow {
+    display: flex;
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
   }

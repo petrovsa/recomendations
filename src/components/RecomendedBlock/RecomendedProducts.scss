@@ -1,21 +1,21 @@
 .recomended-products {
-    display: flex;
-    justify-content: center;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
+  gap: 20px;
 
-    .product-item {
-      position: relative;
+  .product-item {
+    position: relative;
 
-      &::after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 1px;
-        height: 100%;
-        background-color: $black-200;
-        top: 0;
-        right: 0;
-      }
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $black-200;
+      top: 0;
+      right: 0;
     }
   }
+}

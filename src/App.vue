@@ -1,13 +1,17 @@
 <template>
   <div class="home-page">
     <CatalogProducts :productsList="booksList" class="home-page__products" />
-    <SliderBooking :listItems="recomendedList" sliderName="Персональні рекомендації" />
+    <TheSlider sliderName="Персональні рекомендації">
+      <RecomendedProducts :recomendedList="recomendedList" />
+    </TheSlider>
   </div>
 </template>
 
 <script>
-import SliderBooking from './components/SliderBooking.vue';
+import TheSlider from '@/components/TheSlider/TheSlider.vue';
 import CatalogProducts from '@/components/CatalogProducts/CatalogProducts.vue';
+import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts.vue';
+
 
 
 export default {
@@ -156,7 +160,11 @@ export default {
     };
   },
 
-  components: { SliderBooking, CatalogProducts },
+  components: {
+    RecomendedProducts,
+    CatalogProducts,
+    TheSlider
+  },
 
   computed: {
     recomendedList () {
@@ -167,6 +175,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .home-page {
   display: flex;
   flex-direction: column;
