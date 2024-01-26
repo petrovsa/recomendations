@@ -4,10 +4,10 @@
       <h2 class="slider__title"> {{ sliderName }}</h2>
       <div class="slider__nav">
         <div class="slider__arrow slider__arrow--left">
-          <img src="../../assets/Icon.png" alt="icon" />
+          <img :src="require('@/assets/arrow.svg')" alt="icon" />
         </div>
         <div class="slider__arrow slider__arrow--right">
-          <img src="../../assets/Icon.png" alt="icon" />
+          <img :src="require('@/assets/arrow.svg')" alt="icon" />
         </div>
       </div>
     </div>

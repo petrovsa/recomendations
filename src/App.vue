@@ -36,8 +36,8 @@ export default {
           inWishlist: true,
           recomended: true,
           label: {
-            name: top,
-            url: require("./assets/top.svg")
+            name: 'top',
+            value: 'ТОП'
           },
           stars: 4,
         },
@@ -57,6 +57,10 @@ export default {
           inWishlist: false,
           recomended: true,
           stars: 2,
+          label: {
+            name: 'new',
+            value: 'NEW'
+          }
         },
         {
           id: 3,
@@ -93,7 +97,7 @@ export default {
           stars: 3,
           label: {
             name: 'promo',
-            url: require("./assets/promo.svg")
+            value: 'АКЦІЯ'
           }
         },
         {

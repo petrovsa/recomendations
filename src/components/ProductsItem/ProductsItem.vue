@@ -1,6 +1,8 @@
 <template>
     <a class="product-item" href="#">
-        <img v-if="book.label" class="product-item__label" :src="book.label.url" alt="" />
+      <div v-if="book.label" :class="['product-item__label', `product-item__label--${book.label.name}`]" :src="book.label.url" alt="">
+        {{book.label.value}}
+      </div>
         <button :class="['btn', 'product-item__wishlist', { 'in-wishlist': book.inWishlist }]" />
         <button class="btn product-item__cart" />
         <div class="product-item__picture">
@@ -16,7 +18,6 @@
                 </div>
             </a>
           <RatingElement :stars="book.stars" :rating="book.ratingLabel" />
-<!--            <RatingElement :stars="book.stars" :rating="book.ratingLabel" />-->
         </div>
         <div class="product-item__actions">
             <div class="product-item__price">
