@@ -15,7 +15,8 @@
                     {{ book.autor.autor }}
                 </div>
             </a>
-            <RatingElement :rating="book.ratingLabel" />
+          <RatingElement :stars="book.stars" :rating="book.ratingLabel" />
+<!--            <RatingElement :stars="book.stars" :rating="book.ratingLabel" />-->
         </div>
         <div class="product-item__actions">
             <div class="product-item__price">

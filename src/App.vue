@@ -38,7 +38,8 @@ export default {
           label: {
             name: top,
             url: require("./assets/top.svg")
-          }
+          },
+          stars: 4,
         },
         {
           id: 2,
@@ -55,6 +56,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: true,
+          stars: 2,
         },
         {
           id: 3,
@@ -71,6 +73,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: true,
+          stars: 5,
         },
         {
           id: 4,
@@ -87,6 +90,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: true,
+          stars: 3,
           label: {
             name: 'promo',
             url: require("./assets/promo.svg")
@@ -107,6 +111,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: true,
+          stars: 4,
         },
         {
           id: 6,
@@ -123,6 +128,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: true,
+          stars: 2,
         },
         {
           id: 7,
@@ -139,6 +145,7 @@ export default {
           inStock: false,
           inWishlist: false,
           recomended: true,
+          stars: 1,
         },
         {
           id: 8,
@@ -155,6 +162,7 @@ export default {
           inStock: true,
           inWishlist: false,
           recomended: false,
+          stars: 2,
         }
       ]
     };
