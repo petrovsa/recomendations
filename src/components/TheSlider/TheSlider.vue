@@ -4,10 +4,10 @@
       <h2 class="slider__title"> {{ sliderName }}</h2>
       <div class="slider__nav">
         <div class="slider__arrow slider__arrow--left">
-          <img :src="require('@/assets/arrow.svg')" alt="icon" />
+          <BaseIcon name="arrow" />
         </div>
         <div class="slider__arrow slider__arrow--right">
-          <img :src="require('@/assets/arrow.svg')" alt="icon" />
+          <BaseIcon name="arrow" />
         </div>
       </div>
     </div>
@@ -17,6 +17,8 @@
   </div>
 </template>
 <script>
+import BaseIcon from '@/components/BaseIcon/BaseIcon.vue';
+
 export default {
     name: 'TheSlider',
 
@@ -25,7 +27,9 @@ export default {
         type: String,
         default: ''
       }
-    }
+    },
+
+    components: {BaseIcon}
 }
 </script>
 

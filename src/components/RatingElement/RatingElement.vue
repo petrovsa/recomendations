@@ -2,7 +2,7 @@
   <div class="rating">
     <div class="rating__starslist">
       <div class="rating-star" v-for="idx in 5" :key="idx">
-        <img :src="require(`@/assets/star${stars >= idx ? '' : '-grey'}.svg`)" alt="star"/>
+        <BaseIcon :name="`${stars >= idx ? 'star' : 'star-grey'}`" />
       </div>
     </div>
     <div class="rating__value">{{ rating }}</div>
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import BaseIcon from '@/components/BaseIcon/BaseIcon.vue';
+
 export default {
   name: 'RatingElement',
 
@@ -23,7 +25,9 @@ export default {
       type: Number,
       default: null
     }
-  }
+  },
+
+  components: {BaseIcon}
 }
 </script>
 
