@@ -275,4 +275,12 @@
     &__cart.btn {
       background-color: $orange-900;
     }
+
+    &__cart.absent {
+      border: 1px solid $black-200;
+      background-image: url("@/assets/nocart.svg");
+      background-color: $white;
+      pointer-events: none;
+      cursor:none;
+    }
   }

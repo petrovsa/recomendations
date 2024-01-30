@@ -4,7 +4,7 @@
         {{book.label.value}}
       </div>
         <button :class="['btn', 'product-item__wishlist', { 'in-wishlist': book.inWishlist }]" />
-        <button class="btn product-item__cart" />
+        <button :class="['btn', 'product-item__cart',{'absent': book.inStock === false}]" />
         <div class="product-item__picture">
             <img class="product-item__img" :src="book.imgUrl" alt="" />
         </div>
