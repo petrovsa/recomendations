@@ -1,0 +1,124 @@
+.content-text {
+  a {
+    text-decoration: underline;
+    color: $blue-500;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 25px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    list-style: none;
+
+    ul,
+    ol {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    li {
+      padding-left: 32px;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &::before {
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 7px;
+        width: 6px;
+        height: 6px;
+        background: #000;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: counter;
+
+    li {
+      counter-increment: counter;
+
+      &::before {
+        position: absolute;
+        left: 4px;
+        content: counter(counter) ".";
+      }
+    }
+
+    ol {
+      counter-reset: section;
+
+      li {
+        counter-increment: section;
+        padding-left: 40px;
+
+         &::before {
+           position: absolute;
+           left: 4px;
+           content: counter(counter)"."counter(section)".";
+         }
+       }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4 {
+    margin-top: 35px;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

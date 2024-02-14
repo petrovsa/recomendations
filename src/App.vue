@@ -5,6 +5,7 @@
   <TheSlider sliderName="Персональні рекомендації">
     <RecomendedProducts :recomendedList="recomendedList" />
   </TheSlider>
+  <ContentText />
 </template>
 
 <script>
@@ -13,6 +14,11 @@ import TheSlider from '@/components/TheSlider/TheSlider';
 import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
 import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts';
 import SideMenu from "@/components/SideMenu/SideMenu.vue";
+import TheSlider from '@/components/TheSlider/TheSlider';
+import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
+import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts';
+import ContentText from "@/components/ContentText/ContentText";
+
 
 export default {
   name: "App",
@@ -191,6 +197,7 @@ export default {
 <style lang="scss">
 
 body {
+  color: $black-1000;
   margin: 0;
   font: 16px/26px Arial, serif;
 }
