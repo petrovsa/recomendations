@@ -219,49 +219,6 @@ a {
   font-family: $font-base;
 }
 
-p {
-  margin: 0;
-  padding-bottom: 20px;
-  font-size: 16px;
-  font-weight: 26px;
-}
-
-li {
-  padding-left: 5px;
-
-  &:not(:last-child) {
-    padding-bottom: 12px;
-  }
-}
-
-h1,
-h2,
-h3,
-h4 {
-  padding-top: 10px;
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 34px;
-  line-height: 46px;
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 38px;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-h4 {
-  font-size: 22px;
-  line-height: 28px;
-}
-
 /* width */
 ::-webkit-scrollbar {
   height: 4px;
