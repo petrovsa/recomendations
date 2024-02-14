@@ -1,21 +1,29 @@
 <template>
-  <div class="home-page">
-    <CatalogProducts :productsList="booksList" class="home-page__products" />
-    <TheSlider sliderName="Персональні рекомендації">
-      <RecomendedProducts :recomendedList="recomendedList" />
-    </TheSlider>
-  </div>
+  <TheHeader />
+  <SideMenu />
+  <CatalogProducts :productsList="booksList" class="home-page__products" />
+  <TheSlider sliderName="Персональні рекомендації">
+    <RecomendedProducts :recomendedList="recomendedList" />
+  </TheSlider>
 </template>
 
 <script>
-import TheSlider from '@/components/TheSlider/TheSlider.vue';
-import CatalogProducts from '@/components/CatalogProducts/CatalogProducts.vue';
-import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts.vue';
-
-
+import TheHeader from '@/components/TheHeader/TheHeader';
+import TheSlider from '@/components/TheSlider/TheSlider';
+import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
+import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts';
+import SideMenu from "@/components/SideMenu/SideMenu.vue";
 
 export default {
   name: "App",
+
+  components: {
+    SideMenu,
+    TheHeader,
+    RecomendedProducts,
+    CatalogProducts,
+    TheSlider
+  },
 
   data() {
     return {
@@ -172,12 +180,6 @@ export default {
     };
   },
 
-  components: {
-    RecomendedProducts,
-    CatalogProducts,
-    TheSlider
-  },
-
   computed: {
     recomendedList () {
       return this.booksList.filter(book => book.recomended)
@@ -187,6 +189,18 @@ export default {
 </script>
 
 <style lang="scss">
+
+body {
+  margin: 0;
+  font: 16px/26px Arial, serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .home-page {
   display: flex;
@@ -204,9 +218,6 @@ export default {
   }
 }
 
-a {
-  all: initial;
-}
 /* width */
 ::-webkit-scrollbar {
   height: 4px;

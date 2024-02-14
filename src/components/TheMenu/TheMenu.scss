@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 25px;
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    transition: color .3s;
+
+    &:hover {
+      color: rgba(#000, .6);
+    }
+  }
+
+  &--light & {
+    &__link {
+      color: #A2B2C7;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

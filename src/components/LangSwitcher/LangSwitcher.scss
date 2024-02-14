@@ -1,0 +1,28 @@
+.lang-switcher {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    width: 26px;
+    color: #A2B2C7;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: color .3s;
+
+    &.is-active,
+    &:hover {
+      color: #fff;
+    }
+
+    &.is-active {
+      background-color: #4E7AB7;
+      cursor: default;
+    }
+  }
+}
