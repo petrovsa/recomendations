@@ -10,9 +10,6 @@
 
 <script>
 import TheHeader from '@/components/TheHeader/TheHeader';
-import TheSlider from '@/components/TheSlider/TheSlider';
-import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
-import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts';
 import SideMenu from "@/components/SideMenu/SideMenu.vue";
 import TheSlider from '@/components/TheSlider/TheSlider';
 import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
@@ -26,9 +23,10 @@ export default {
   components: {
     SideMenu,
     TheHeader,
+    TheSlider,
     RecomendedProducts,
     CatalogProducts,
-    TheSlider
+    ContentText
   },
 
   data() {
