@@ -4,6 +4,7 @@
     <TheSlider sliderName="Персональні рекомендації">
       <RecomendedProducts :recomendedList="recomendedList" />
     </TheSlider>
+    <TheContent />
   </div>
 </template>
 
@@ -11,7 +12,7 @@
 import TheSlider from '@/components/TheSlider/TheSlider.vue';
 import CatalogProducts from '@/components/CatalogProducts/CatalogProducts.vue';
 import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts.vue';
-
+import TheContent from "@/components/TheContent/TheContent.vue";
 
 
 export default {
@@ -175,7 +176,8 @@ export default {
   components: {
     RecomendedProducts,
     CatalogProducts,
-    TheSlider
+    TheSlider,
+    TheContent
   },
 
   computed: {
@@ -187,6 +189,14 @@ export default {
 </script>
 
 <style lang="scss">
+
+body {
+  font-family: $font-base;
+  color: $black-1000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
 
 .home-page {
   display: flex;
@@ -206,7 +216,52 @@ export default {
 
 a {
   all: initial;
+  font-family: $font-base;
 }
+
+p {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 26px;
+}
+
+li {
+  padding-left: 5px;
+
+  &:not(:last-child) {
+    padding-bottom: 12px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   height: 4px;
