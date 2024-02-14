@@ -214,16 +214,11 @@ body {
   }
 }
 
-a {
-  all: initial;
-  font-family: $font-base;
-}
-
 p {
   margin: 0;
   padding-bottom: 20px;
   font-size: 16px;
-  font-weight: 26px;
+  line-height: 26px;
 }
 
 li {
