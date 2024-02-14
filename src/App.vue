@@ -4,15 +4,15 @@
     <TheSlider sliderName="Персональні рекомендації">
       <RecomendedProducts :recomendedList="recomendedList" />
     </TheSlider>
-    <TheContent />
+    <ContentText />
   </div>
 </template>
 
 <script>
-import TheSlider from '@/components/TheSlider/TheSlider.vue';
-import CatalogProducts from '@/components/CatalogProducts/CatalogProducts.vue';
-import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts.vue';
-import TheContent from "@/components/TheContent/TheContent.vue";
+import TheSlider from '@/components/TheSlider/TheSlider';
+import CatalogProducts from '@/components/CatalogProducts/CatalogProducts';
+import RecomendedProducts from '@/components/RecomendedBlock/RecomendedProducts';
+import ContentText from "@/components/ContentText/ContentText";
 
 
 export default {
@@ -177,7 +177,7 @@ export default {
     RecomendedProducts,
     CatalogProducts,
     TheSlider,
-    TheContent
+    ContentText
   },
 
   computed: {
@@ -194,7 +194,6 @@ body {
   font-family: $font-base;
   color: $black-1000;
   font-size: 16px;
-  font-weight: 400;
   line-height: 26px;
 }
 
@@ -212,11 +211,6 @@ body {
   &__products {
     margin: 0 auto;
   }
-}
-
-a {
-  all: initial;
-  font-family: $font-base;
 }
 
 /* width */
